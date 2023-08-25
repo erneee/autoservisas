@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Uzsakymai</h1>
+<hr/>
+{% for order in order_list %}
+
+<p><a href="{% url 'order-one' order.id %}">Uzsakymo data {{ order.date }} <br> {{ order.car.client }}</a></p>
+
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Registruoti automobiliai</h1>
+<ol>
+    {% for car in num_of_cars_t %}
+        <li><a href="{% url 'car-one' car.id%}">{{ car.car_mod.model }} {{ car.car_mod.make }}  valstybiniai nr. {{ car.i_nr }}</a></li>
+    {% endfor %}
+</ol>
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Automobilis - {{ singe_car_t.car_mod.model }}  {{ singe_car_t.car_mod.make }}</h1>
+<h1>Valstybinis numeris - {{ singe_car_t.i_nr }}</h1>
+<h1>VIN numeris - {{ singe_car_t.vin }}</h1>
+<h2>Priklauso</h2>
+<h3>{{ singe_car_t.client.f_name }} {{ singe_car_t.client.l_name }}</h3>
+
+
+{% endblock %}

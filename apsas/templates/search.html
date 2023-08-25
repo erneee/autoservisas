@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Rezultatai pagal paieska "{{ query_t }}"</h3>
+
+{% for car in search_results_t %}
+<p><a href="{% url 'car-one' car.id%}">Automobilio nr: {{ car.i_nr }}<br> Savininkas: {{ car.client }}</a></p>
+{% endfor %}
+
+
+
+{% endblock %}
+

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<li>Paslaugos</li>
+<ul>
+  {% for paslauga in numb_of_services_t %}
+  <li>{{ paslauga.name }}: {{ paslauga.price }} €</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+

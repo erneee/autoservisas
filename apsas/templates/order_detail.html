@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Automobilis: {{ order.car.car_mod.model }} {{ order.car.car_mod.make }}</h1>
+<p><strong>Paslauga:</strong></p>
+{% for order in order.orders.all %}
+
+<p>{{ order.service.name }} {{order.service.price}} euro</p>
+{% endfor %}
+
+
+{% endblock %}
